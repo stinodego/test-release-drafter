@@ -1,25 +1,26 @@
-name-template: 'rs-v$RESOLVED_VERSION'
-tag-template: 'rs-v$RESOLVED_VERSION'
+name-template: rs-v$RESOLVED_VERSION
+tag-template: rs-v$RESOLVED_VERSION
+tag-prefix: rs-v
 
 include-labels:
-  - 'rust'
+  - rust
 
 categories:
-  - title: 'Features 🚀'
+  - title: Features 🚀
     labels:
-      - 'feature'
-      - 'enhancement'
-  - title: 'Bug fixes 🐛'
-    labels: 'fix'
-  - title: 'Maintenance 🧰'
-    label: 'chore'
+      - feature
+      - enhancement
+  - title: Bug fixes 🐛
+    labels: fix
+  - title: Maintenance 🧰
+    label: chore
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 version-resolver:
   minor:
     labels:
-      - 'breaking'
+      - breaking
   default: patch
 
 template: |
