@@ -1,2 +1,2 @@
-python: py-polars/**/*
-rust: polars/**/*
+python: python/**/*
+rust: rust/**/*
