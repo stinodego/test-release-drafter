@@ -7,14 +7,12 @@ include-labels:
 
 categories:
   - title: Features 🚀
-    labels:
-      - feature
-      - enhancement
+    labels: feature
   - title: Bug fixes 🐛
     labels: fix
   - title: Maintenance 🧰
     label: chore
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-template: '- $TITLE (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 version-resolver:
