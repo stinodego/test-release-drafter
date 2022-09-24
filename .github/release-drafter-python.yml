@@ -1,6 +1,9 @@
 name-template: 'py-v$RESOLVED_VERSION 🌈'
 tag-template: 'py-v$RESOLVED_VERSION'
 
+include-labels:
+  - 'python'
+
 categories:
   - title: '🚀 Features'
     labels:
