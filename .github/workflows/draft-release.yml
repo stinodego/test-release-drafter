@@ -1,6 +1,9 @@
-name: Create Rust release draft
+name: Update release draft
 
-on: workflow_dispatch
+on:
+  push:
+    branch:
+      - main
 
 permissions:
   contents: write
@@ -14,5 +17,12 @@ jobs:
         uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter-rust.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Draft Python release
+        uses: release-drafter/release-drafter@v5
+        with:
+          config-name: release-drafter-python.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
