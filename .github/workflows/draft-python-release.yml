@@ -1,0 +1,18 @@
+name: Create Python release draft
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Draft Python release
+        uses: release-drafter/release-drafter@v5
+        with:
+          config-name: release-drafter-python.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
