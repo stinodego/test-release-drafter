@@ -5,17 +5,13 @@ include-labels:
   - 'rust'
 
 categories:
-  - title: '🚀 Features'
+  - title: 'Features 🚀'
     labels:
-      - 'feat'
       - 'feature'
       - 'enhancement'
-  - title: '🐛 Bug Fixes'
-    labels:
-      - 'fix'
-      - 'bugfix'
-      - 'bug'
-  - title: '🧰 Maintenance'
+  - title: 'Bug fixes 🐛'
+    labels: 'fix'
+  - title: 'Maintenance 🧰'
     label: 'chore'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
@@ -31,6 +27,20 @@ version-resolver:
     labels:
       - 'patch'
   default: patch
+
+autolabeler:
+  - label: 'rust'
+    files:
+      - 'rust/**/*'
+  - label: 'python'
+    files:
+      - 'python/**/*'
+  - label: 'feature'
+    branch:
+      - '/feature\/.+/'
+  - label: 'fix'
+    branch:
+      - '/fix\/.+/'
 
 template: |
   ## Changes
