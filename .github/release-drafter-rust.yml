@@ -21,7 +21,4 @@ version-resolver:
       - breaking
   default: patch
 
-template: |
-  ## Changes
-
-  $CHANGES
+template: $CHANGES
