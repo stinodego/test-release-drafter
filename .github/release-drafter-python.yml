@@ -1,29 +1,25 @@
-name-template: py-v$RESOLVED_VERSION
-tag-template: py-v$RESOLVED_VERSION
-tag-prefix: py-v
+name-template: py-$RESOLVED_VERSION
+tag-template: py-$RESOLVED_VERSION
+tag-prefix: py-
 
 include-labels:
   - python
 
 categories:
   - title: Features 🚀
-    labels:
-      - feature
-      - enhancement
+    labels: feature
   - title: Bug fixes 🐛
     labels: fix
-  - title: Maintenance 🧰
+  - title: Other 🛠️
     label: chore
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-template: '- $TITLE (#$NUMBER)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 version-resolver:
   minor:
-    labels:
-      - breaking
+    labels: breaking
   default: patch
 
-template: |
-  ## Changes
-
-  $CHANGES
+header: '# New Polars release for Python!'
+template: $CHANGES
+footer: '**Full changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...py-$RESOLVED_VERSION'
