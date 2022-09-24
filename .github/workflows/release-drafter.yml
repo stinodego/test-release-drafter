@@ -1,4 +1,4 @@
-name: Release Drafter
+name: Update release drafts
 
 on:
   push:
@@ -6,41 +6,24 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: read
 
 jobs:
-  update_release_draft_rust:
-    permissions:
-      # write permission is required to create a github release
-      contents: write
-      # write permission is required for autolabeler
-      # otherwise, read permission is required at least
-      pull-requests: write
+  main:
     runs-on: ubuntu-latest
     steps:
       # Drafts your next Release notes as Pull Requests are merged into "master"
-      - uses: release-drafter/release-drafter@v5
-        # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
+      - name: Draft Rust release
+        uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter-rust.yml
-          # disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  update_release_draft_python:
-    permissions:
-      # write permission is required to create a github release
-      contents: write
-      # write permission is required for autolabeler
-      # otherwise, read permission is required at least
-      pull-requests: write
-    runs-on: ubuntu-latest
-    steps:
-      # Drafts your next Release notes as Pull Requests are merged into "master"
-      - uses: release-drafter/release-drafter@v5
-        # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
+      - name: Draft Python release
+        uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter-python.yml
-          # disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
