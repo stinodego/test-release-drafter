@@ -25,4 +25,9 @@ template: |
 
   $CHANGES
 
-  **Full changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...py-$RESOLVED_VERSION
+  ## Full changelog
+  https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...py-$RESOLVED_VERSION
+
+  ## Contributors
+  Many thanks to all our contributors for making this release possible!
+  $CONTRIBUTORS
