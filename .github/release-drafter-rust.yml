@@ -1,6 +1,9 @@
 name-template: 'rs-v$RESOLVED_VERSION 🌈'
 tag-template: 'rs-v$RESOLVED_VERSION'
 
+include-labels:
+  - 'rust'
+
 categories:
   - title: '🚀 Features'
     labels:
