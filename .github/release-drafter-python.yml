@@ -17,8 +17,7 @@ change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add
 
 version-resolver:
   minor:
-    labels:
-      - breaking
+    labels: breaking
   default: patch
 
 template: $CHANGES
