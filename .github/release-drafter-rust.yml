@@ -1,6 +1,6 @@
-name-template: rs-v$RESOLVED_VERSION
-tag-template: rs-v$RESOLVED_VERSION
-tag-prefix: rs-v
+name-template: rs-$RESOLVED_VERSION
+tag-template: rs-$RESOLVED_VERSION
+tag-prefix: rs-
 
 include-labels:
   - rust
@@ -20,4 +20,6 @@ version-resolver:
     labels: breaking
   default: patch
 
+header: '# New Polars release for Rust!'
 template: $CHANGES
+footer: '**Full changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...py-$RESOLVED_VERSION'

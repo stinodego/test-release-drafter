@@ -1,6 +1,6 @@
-name-template: py-v$RESOLVED_VERSION
-tag-template: py-v$RESOLVED_VERSION
-tag-prefix: py-v
+name-template: py-$RESOLVED_VERSION
+tag-template: py-$RESOLVED_VERSION
+tag-prefix: py-
 
 include-labels:
   - python
@@ -20,4 +20,6 @@ version-resolver:
     labels: breaking
   default: patch
 
+header: '# New Polars release for Python!'
 template: $CHANGES
+footer: '**Full changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...py-$RESOLVED_VERSION'
