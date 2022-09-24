@@ -20,6 +20,9 @@ version-resolver:
     labels: breaking
   default: patch
 
-header: '# New Polars release for Rust!'
-template: $CHANGES
-footer: '**Full changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...py-$RESOLVED_VERSION'
+template: |
+  # New Polars release for Rust!
+
+  $CHANGES
+
+  **Full changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...rs-$RESOLVED_VERSION
