@@ -1,0 +1,14 @@
+autolabeler:
+  - label: 'rust'
+    files:
+      - 'rust/**/*'
+  - label: 'python'
+    files:
+      - 'python/**/*'
+  - label: 'feature'
+    branch:
+      - '/feature\/.+/'
+      - '/feat\/.+/'
+  - label: 'fix'
+    branch:
+      - '/fix\/.+/'
