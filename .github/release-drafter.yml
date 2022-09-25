@@ -12,3 +12,10 @@ version-resolver:
   minor:
     labels: breaking
   default: patch
+
+template: |
+  $CHANGES
+
+  ## Contributors
+  Many thanks to all our contributors for making this release possible!
+  $CONTRIBUTORS
