@@ -1,4 +1,4 @@
-_extends: release-drafter
+_extends: test-release-drafter:.github/release-drafter.yml
 
 name-template: rs-$RESOLVED_VERSION
 tag-template: rs-$RESOLVED_VERSION
