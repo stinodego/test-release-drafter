@@ -1,24 +1,11 @@
+_extends: release-drafter
+
 name-template: rs-$RESOLVED_VERSION
 tag-template: rs-$RESOLVED_VERSION
 tag-prefix: rs-
 
 include-labels:
   - rust
-
-categories:
-  - title: Features 🚀
-    labels: feature
-  - title: Bug fixes 🐛
-    labels: fix
-  - title: Other 🛠️
-    label: chore
-change-template: '- $TITLE (#$NUMBER)'
-change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
-
-version-resolver:
-  minor:
-    labels: breaking
-  default: patch
 
 template: |
   # New Polars release for Rust!

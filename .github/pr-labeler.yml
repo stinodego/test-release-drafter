@@ -1,3 +1,4 @@
+# Pull request tags based on branch names
 feature:
   - feature/*
   - feat/*
