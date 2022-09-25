@@ -1,0 +1,12 @@
+name: Release Python
+
+on:
+  push:
+    tags:
+      - py-*
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Wheels released!
