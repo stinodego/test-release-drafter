@@ -1,0 +1,12 @@
+name: Release Rust
+
+on:
+  push:
+    tags:
+      - rs-*
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Crate released!
