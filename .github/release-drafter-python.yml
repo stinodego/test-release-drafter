@@ -7,4 +7,5 @@ tag-prefix: py-
 include-labels:
   - python
 
-header: '# New Polars release for Python!'
+header: |
+  # New Polars release for Python!

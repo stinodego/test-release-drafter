@@ -7,4 +7,6 @@ tag-prefix: rs-
 include-labels:
   - rust
 
-header: '# New Polars release for Rust!'
+header: |
+  # New Polars release for Rust!
+
