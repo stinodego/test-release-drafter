@@ -7,14 +7,4 @@ tag-prefix: rs-
 include-labels:
   - rust
 
-template: |
-  # New Polars release for Rust!
-
-  $CHANGES
-
-  ## Full changelog
-  https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...rs-$RESOLVED_VERSION
-
-  ## Contributors
-  Many thanks to all our contributors for making this release possible!
-  $CONTRIBUTORS
+header: '# New Polars release for Rust!'
