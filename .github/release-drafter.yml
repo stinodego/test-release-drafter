@@ -5,7 +5,7 @@ categories:
     labels: fix
   - title: Other 🛠️
     label: chore
-change-template: '- $TITLE (#$NUMBER)'
+change-template: '- $TITLE (#$NUMBER by @$AUTHOR)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 version-resolver:
@@ -15,7 +15,3 @@ version-resolver:
 
 template: |
   $CHANGES
-
-  ## Contributors
-  Many thanks to all our contributors for making this release possible!
-  $CONTRIBUTORS
