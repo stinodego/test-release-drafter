@@ -13,5 +13,24 @@ version-resolver:
     labels: breaking
   default: patch
 
+autolabeler:
+  - label: rust
+    files:
+      - polars/
+  - label: python
+    files:
+      - py-polars/
+  - label: feature
+    branch:
+      - '^feat\/.*$'
+      - '^feature\/.*$'
+  - label: fix
+    branch:
+      - '^fix\/.*$'
+  - label: chore
+    branch:
+      # Match anything other than a fix or a feature
+      - '^(?!(fix\/|feat\/|feature\/)).*$'
+
 template: |
   $CHANGES

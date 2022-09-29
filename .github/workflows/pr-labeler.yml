@@ -10,12 +10,10 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - name: Label based on changes
-        uses: actions/labeler@v4
+      - name: Label pull request
+        uses: release-drafter/release-drafter@v5
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Label based on branch name
-        uses: TimonVS/pr-labeler-action@v3
+          config-name: release-drafter-rust.yml
+          disable-releaser: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
