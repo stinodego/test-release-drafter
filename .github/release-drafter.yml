@@ -43,6 +43,6 @@ autolabeler:
 
 template: |
   $CHANGES
-  ---
+
   Thank you to all our contributors for making this release possible!
   $CONTRIBUTORS
