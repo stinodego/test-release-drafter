@@ -22,15 +22,15 @@ autolabeler:
       - py-polars/
   - label: feature
     branch:
-      - '/feat\/.*/'
-      - '/feature\/.*/'
+      - '/^feat\/.*/'
+      - '/^feature\/.*/'
   - label: fix
     branch:
-      - '/fix\/.*/'
+      - '/^fix\/.*/'
   - label: chore
     branch:
       # Match anything other than a fix or a feature
-      - '/(?!(fix\/|feat\/|feature\/)).*/'
+      - '/^(?!(fix\/|feat\/|feature\/)).*/'
 
 template: |
   $CHANGES
