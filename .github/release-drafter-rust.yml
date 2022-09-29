@@ -1,12 +1,8 @@
 _extends: test-release-drafter:.github/release-drafter.yml
 
-name-template: rs-$RESOLVED_VERSION
+name-template: Rust Polars $RESOLVED_VERSION
 tag-template: rs-$RESOLVED_VERSION
 tag-prefix: rs-
 
 include-labels:
   - rust
-
-header: |
-  # New Polars release for Rust!
-

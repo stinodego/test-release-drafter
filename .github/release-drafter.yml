@@ -5,7 +5,7 @@ categories:
     labels: fix
   - title: Other 🛠️
     label: chore
-change-template: '- $TITLE (#$NUMBER)'
+change-template: '- $TITLE (#$NUMBER by @$AUTHOR)'
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 version-resolver:
@@ -13,9 +13,24 @@ version-resolver:
     labels: breaking
   default: patch
 
+autolabeler:
+  - label: rust
+    files:
+      - polars/
+  - label: python
+    files:
+      - py-polars/
+  - label: feature
+    branch:
+      - '^feat\/.*$'
+      - '^feature\/.*$'
+  - label: fix
+    branch:
+      - '^fix\/.*$'
+  - label: chore
+    branch:
+      # Match anything other than a fix or a feature
+      - '^(?!(fix\/|feat\/|feature\/)).*$'
+
 template: |
   $CHANGES
-
-  ## Contributors
-  Many thanks to all our contributors for making this release possible!
-  $CONTRIBUTORS

@@ -18,6 +18,7 @@ jobs:
         uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter-rust.yml
+          disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -25,5 +26,6 @@ jobs:
         uses: release-drafter/release-drafter@v5
         with:
           config-name: release-drafter-python.yml
+          disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
