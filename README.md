@@ -1,6 +1,6 @@
 # Drafting multiple releases
 
-This repo tests using release-drafter for drafting multiple releases. Conclusion: **it works amazingly well**!
+This repo tests using [release-drafter](https://github.com/release-drafter/release-drafter) for drafting multiple releases. Conclusion: **it works amazingly well**!
 
 Here's how it works:
 * Everything works based on PR tags. No fiddling with conventional commits required.
