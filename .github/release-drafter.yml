@@ -1,12 +1,18 @@
 categories:
-  - title: Features 🚀
-    labels: feature
+  - title: Highlights 🏆
+    labels: highlight
+  - title: Breaking changes ⚠️
+    labels: breaking
+  - title: Performance improvements 🚀
+    labels: performance
+  - title: Enhancements ✨
+    labels: enhancement
   - title: Bug fixes 🐛
     labels: fix
-  - title: Other 🛠️
+  - title: Other improvements 🛠️
     label: chore
-change-template: '- $TITLE (#$NUMBER by @$AUTHOR)'
-change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+change-template: '- $TITLE (#$NUMBER)'
+change-title-escapes: '\<*_&'
 
 version-resolver:
   minor:
@@ -20,17 +26,23 @@ autolabeler:
   - label: python
     files:
       - py-polars/
-  - label: feature
+  - label: performance
     branch:
-      - '/^feat\/.*/'
-      - '/^feature\/.*/'
+      - '/^perf(ormance)?\/.*/'
+  - label: enhancement
+    branch:
+      - '/^enhance(ment)?\/.*/'
+      - '/^feat(ure)?\/.*/'
   - label: fix
     branch:
-      - '/^fix\/.*/'
+      - '/^(bug)?fix\/.*/'
   - label: chore
     branch:
-      # Match anything other than a fix or a feature
-      - '/^(?!(fix\/|feat\/|feature\/)).*/'
+      # Match anything else
+      - '/^(?!(perf(ormance)?\/|enhance(ment)?\/|feat(ure)?\/|(bug)?fix\/)).*/'
 
 template: |
   $CHANGES
+  ---
+  Thank you to all our contributors for making this release possible!
+  $CONTRIBUTORS
