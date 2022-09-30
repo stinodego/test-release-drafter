@@ -22,13 +22,10 @@ categories:
 
 change-template: '- $TITLE (#$NUMBER)'
 change-title-escapes: '\<*_&'
-
 replacers:
   # Remove conventional commits from titles
   - search: '/- (build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.*\))?(\!)?\: /g'
     replace: '- '
-  - search: 'Regex'
-    replace: 'testing'
 
 version-resolver:
   minor:
