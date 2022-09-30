@@ -1,6 +1,8 @@
 name: Pull request labeler
 
-on: pull_request_target
+on:
+  pull_request_target:
+    types: [opened, edited]
 
 permissions:
   contents: read
