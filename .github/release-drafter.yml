@@ -10,9 +10,23 @@ categories:
   - title: Bug fixes 🐛
     labels: fix
   - title: Other improvements 🛠️
-    label: chore
+    label:
+      - build
+      - chore
+      - ci
+      - docs
+      - refactor
+      - revert
+      - style
+      - test
+
 change-template: '- $TITLE (#$NUMBER)'
 change-title-escapes: '\<*_&'
+
+# replacers:
+#   # Remove conventional commits from titles
+#   - search: '  - (feat|chore)((\[|\])?\!?'
+#     replace: '  - '
 
 version-resolver:
   minor:
@@ -21,25 +35,47 @@ version-resolver:
 
 autolabeler:
   - label: rust
-    files:
-      - polars/
+    title:
+      - '/rust/'
   - label: python
-    files:
-      - py-polars/
-  - label: performance
-    branch:
-      - '/^perf(ormance)?\/.*/'
-  - label: enhancement
-    branch:
-      - '/^enhance(ment)?\/.*/'
-      - '/^feat(ure)?\/.*/'
-  - label: fix
-    branch:
-      - '/^(bug)?fix\/.*/'
+    title:
+      - '/python/'
+  - label: breaking
+    title:
+      - '/\!\: /'
+  - label: build
+    title:
+      - '/^build/'
   - label: chore
-    branch:
-      # Match anything else
-      - '/^(?!(perf(ormance)?\/|enhance(ment)?\/|feat(ure)?\/|(bug)?fix\/)).*/'
+    title:
+      - '/^chore/'
+  - label: ci
+    title:
+      - '/^ci/'
+  - label: docs
+    title:
+      - '/^docs/'
+  - label: enhancement
+    title:
+      - '/^feat/'
+  - label: fix
+    title:
+      - '/^fix/'
+  - label: performance
+    title:
+      - '/^perf/'
+  - label: refactor
+    title:
+      - '/^refactor/'
+  - label: revert
+    title:
+      - '/^revert/'
+  - label: style
+    title:
+      - '/^style/'
+  - label: test
+    title:
+      - '/^test/'
 
 template: |
   $CHANGES
