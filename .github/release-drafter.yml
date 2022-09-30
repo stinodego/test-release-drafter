@@ -25,7 +25,7 @@ change-title-escapes: '\<*_&'
 
 replacers:
   # Remove conventional commits from titles
-  - search: '^- (build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.*\))?(\!)?\: '
+  - search: '- (build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.*\))?(\!)?\: '
     replace: '- '
 
 version-resolver:
