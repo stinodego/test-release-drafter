@@ -1,15 +1,15 @@
 categories:
-  - title: Highlights 🏆
+  - title: 🏆 Highlights
     labels: highlight
-  - title: Breaking changes ⚠️
+  - title: ⚠️ Breaking changes
     labels: breaking
-  - title: Performance improvements 🚀
+  - title: 🚀 Performance improvements
     labels: performance
-  - title: Enhancements ✨
+  - title: ✨ Enhancements
     labels: enhancement
-  - title: Bug fixes 🐛
+  - title: 🐞 Bug fixes
     labels: fix
-  - title: Other improvements 🛠️
+  - title: 🛠️ Other improvements
     label:
       - build
       - chore
