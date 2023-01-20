@@ -3,7 +3,6 @@ name: Release Python
 on:
   push:
     tags:
-      - py-*
 
 jobs:
   release:
